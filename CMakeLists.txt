@@ -11,23 +11,24 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5  REQUIRED COMPONENTS Widgets Core )
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Multimedia)
+#include_directories(./include )
 
 set(PROJECT_SOURCES
+        mycoin.h
+        mypushbutton.h
+        chooselevelscene.h
+        playscene.h
+        dataconfig.h
+        mainscene.h
         main.cpp
         mainscene.cpp
-        mainscene.h
-        mainscene.ui
         mypushbutton.cpp
-        mypushbutton.h
         chooselevelscene.cpp
-        chooselevelscene.h
         playscene.cpp
-        playscene.h
         mycoin.cpp
-        mycoin.h
         dataconfig.cpp
-        dataconfig.h
         res.qrc
+        mainscene.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
